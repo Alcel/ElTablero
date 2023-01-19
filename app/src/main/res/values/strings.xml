@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ElTablero</string>
+    <string name="gameMode">Modo de juego</string>
+    <string name="colors">Colores</string>
+    <string name="numbers">Numeros</string>
+    <string name="sound">Sonido</string>
+    <string name="vibration">Vibracion</string>
+    <string name="play">Jugar</string>
 </resources>
