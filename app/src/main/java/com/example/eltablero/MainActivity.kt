@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
          barra2 = binding.seekBar2
          barra3 = binding.seekBar3
          textProgress1 = binding.textProgress1
-        textProgress2 = binding.textProgress2
+         textProgress2 = binding.textProgress2
          textProgress3 = binding.textProgress3
 
 

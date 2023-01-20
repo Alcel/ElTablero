@@ -6,4 +6,7 @@
     <string name="sound">Sonido</string>
     <string name="vibration">Vibracion</string>
     <string name="play">Jugar</string>
+    <string name="numFilas">Numero de filas</string>
+    <string name="numColumn">Numero de columnas</string>
+    <string name="numColor">Numero de colores</string>
 </resources>

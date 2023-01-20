@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="@string/numFilas" />
 
         <TextView
             android:id="@+id/textProgress1"
@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="@string/numColumn" />
 
         <TextView
             android:id="@+id/textProgress2"
@@ -71,7 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="@string/numColor" />
 
         <TextView
             android:id="@+id/textProgress3"
