@@ -6,4 +6,9 @@
     <string name="sound">Sonido</string>
     <string name="vibration">Vibracion</string>
     <string name="play">Jugar</string>
+    <string name="opcionesJugador">Opciones</string>
+    <string name="instrucciones">Instrucciones</string>
+    <string name="sobre">Info</string>
+    <string name="about">Info</string>
+    <string name="como">Instrucciones</string>
 </resources>
