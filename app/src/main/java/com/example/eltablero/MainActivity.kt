@@ -42,9 +42,9 @@ class MainActivity : AppCompatActivity() {
         textProgress2.setText(" "+barra2.progress.toString())
         textProgress3.setText(" "+barra3.progress.toString())
         barra1.min=3
-        barra1.max=barra1.max+3 //Barra 1 tiene el mismo valor maximo que barra 2 y 3
-        barra2.min=barra1.max+3
-        barra3.min=barra1.max+3
+        barra1.max=barra1.max //Barra 1 tiene el mismo valor maximo que barra 2 y 3
+        barra2.min=barra1.min
+        barra3.min=barra1.min
 
         grupoRadio.setOnCheckedChangeListener(
             RadioGroup.OnCheckedChangeListener { group, checkedId ->
@@ -79,14 +79,13 @@ class MainActivity : AppCompatActivity() {
             override fun onStopTrackingTouch(p0: SeekBar?) {
             }
         })
+        binding.playButton.setOnClickListener {startPlay()  }
     }
     fun startPlay(){
-
-
         val inten: Intent=Intent(this,GameField::class.java)
-        inten.putExtra("columnas",barra1.progress.toString())
-        inten.putExtra("filas",barra2.progress.toString())
-        inten.putExtra("elemTop",barra3.progress.toString())
+        inten.putExtra("columnas",barra1.progress)
+        inten.putExtra("filas",barra2.progress)
+        inten.putExtra("elemTop",barra3.progress)
         inten.putExtra("vibracion",binding.vibrationCheckBox.isChecked)
         inten.putExtra("sonido",binding.soundCheckBox.isChecked)
         inten.putExtra("modo",eleccion)
