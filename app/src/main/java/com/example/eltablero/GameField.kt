@@ -84,6 +84,51 @@ class GameField : AppCompatActivity() {
                                   tv.layoutParams= LinearLayout.LayoutParams(0,height,1.0f)
                                   //Sin setOnClickListener
                                   tv.setOnClickListener {
+                                          if(i==0 && j==0){
+                                                  changeView(0,1)
+                                                  changeView(1,0)
+                                                  changeView(1,1)
+                                          }
+                                          else if(i==0 && j==topTileY-1){
+                                                  changeView(0,topTileY-2)
+                                                  changeView(1,topTileY-2)
+                                                  changeView(0,topTileY-1)
+                                          }
+                                          else if(i==topTileX-1&& j == topTileY-1){
+                                                changeView(topTileX-2,topTileY-1)
+                                                  changeView(topTileX-2,topTileY-2)
+                                                  changeView(topTileX-1,topTileY-2)
+                                          }
+                                          else if(i==0){
+                                                  changeView(i,j-1)
+                                                  changeView(i,j+1)
+                                                  changeView(i+1,j)
+                                          }
+                                          else if(j==0){
+                                                  changeView(i-1,j)
+                                                  changeView(i+1,j)
+                                                  changeView(i,j+1)
+                                          }
+                                          else if(j==topTileX-1){
+                                                  changeView(i,j-1)
+                                                  changeView(i,j+1)
+                                                  changeView(i-1,j)
+                                          }
+                                          else if(j==topTileY-1){
+                                                  changeView(i-1,j)
+                                                  changeView(i+1,j)
+                                                  changeView(i,j-1)
+                                          }
+                                          else{
+                                                  changeView(i-1,j)
+                                                  changeView(i+1,j)
+                                                  changeView(i,j-1)
+                                                  changeView(i,j+1)
+                                          }
+                                          contador++
+                                          binding.pulsaciones.setText(contador.toString())
+                                          checkIfFinished()
+
 
                                   }
                                   l2.addView(tv)
@@ -109,8 +154,8 @@ class GameField : AppCompatActivity() {
         }
         fun checkIfFinished(){
                 val valor = values[0][0]
-                for(i in 0..topTileY){
-                        for(j in 0..topTileX)
+                for(i in 0..topTileY-1){
+                        for(j in 0..topTileX-1)
                                 if (values[j][i] !=valor) return;
                 }
         }
