@@ -33,8 +33,7 @@ class GameField : AppCompatActivity() {
         lateinit var mp: MediaPlayer
         lateinit var vibrator: Vibrator
         lateinit var texto: TextView
-        lateinit var x: IntArray
-        lateinit var y: IntArray
+
 
         lateinit var binding: CeldaviewBinding
           override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,12 +46,10 @@ class GameField : AppCompatActivity() {
                   binding=CeldaviewBinding.inflate(layoutInflater)
                   val bundle=intent.extras
                   val dm:DisplayMetrics=resources.displayMetrics
-                  height=(dm.heightPixels-180)/topTileX!!
+                  height=(dm.heightPixels-1300)/topTileX!!
                   width=dm.heightPixels/topTileX!!
-                  x= IntArray(topTileX)
-                  y= IntArray(topTileY)
-                  values = arrayOf(x, y)//Array bidimensional
-                  ids=arrayOf(x,y)
+
+
 
                   if (bundle != null) {
                           topTileX=bundle.getInt("columnas")
@@ -66,14 +63,18 @@ class GameField : AppCompatActivity() {
 
                           }
                   }
+                  values = Array(topTileX){ IntArray(topTileY) }//Array bidimensional
+                  ids=Array(topTileX){IntArray(topTileY)}
                   var ident =0
                   val miLin = binding.tablero
-                  for(i in 0..topTileY){
+                  for(i in 0..topTileY-1){
                           val l2:LinearLayout = LinearLayout(this)
                           l2.orientation=LinearLayout.HORIZONTAL
-                          for (j in 0..topTileX){
-                                  println(topTileX)
+                          for (j in 0..topTileX-1){
+                                  println("j = "+j)
+                                  println("topX = "+topTileX)
                                   val tramaToShow = miRandom()
+                                  println("["+j+"]"+"["+i+"]")
                                   values[j][i] = tramaToShow
                                   val tv:CeldaView = CeldaView(this,j,i,topElement,
                                   tramaToShow,dibujos[tramaToShow])
@@ -95,7 +96,6 @@ class GameField : AppCompatActivity() {
           }
         fun miRandom():Int{
                 var numAl:Int
-                println(topElement)
                 numAl= Random.nextInt(0,topElement);
                 return numAl;
         }

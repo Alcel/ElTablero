@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         val grupoRadio = binding.grupo
 
 
-        println(barra1.min.toString())
+
         textProgress1.setText(" "+barra1.progress.toString())
         textProgress2.setText(" "+barra2.progress.toString())
         textProgress3.setText(" "+barra3.progress.toString())

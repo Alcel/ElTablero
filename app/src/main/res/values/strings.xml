@@ -11,4 +11,7 @@
     <string name="sobre">Info</string>
     <string name="about">Info</string>
     <string name="como">Instrucciones</string>
+    <string name="numFilas">Numero de Filas</string>
+    <string name="numColumn">Numero de Columnas</string>
+    <string name="numColor">Numero de Colores</string>
 </resources>
