@@ -6,6 +6,7 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
+import android.widget.Chronometer
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.SeekBar
@@ -83,12 +84,14 @@ class MainActivity : AppCompatActivity() {
     }
     fun startPlay(){
         val inten: Intent=Intent(this,GameField::class.java)
+
         inten.putExtra("columnas",barra1.progress)
         inten.putExtra("filas",barra2.progress)
         inten.putExtra("elemTop",barra3.progress)
         inten.putExtra("vibracion",binding.vibrationCheckBox.isChecked)
         inten.putExtra("sonido",binding.soundCheckBox.isChecked)
         inten.putExtra("modo",eleccion)
+
         startActivity(inten)
 
     }
