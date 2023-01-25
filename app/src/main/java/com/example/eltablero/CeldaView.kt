@@ -4,18 +4,19 @@ import android.content.Context
 import androidx.core.view.TintableBackgroundView
 
 class CeldaView(context:Context,x: Int, y: Int, index: Int, topElementos: Int,backgroundView: Int): androidx.appcompat.widget.AppCompatButton(context) {
-    var x:Int =0
-    var y:Int =0
-    var index:Int =0
-    var topElementos:Int=0
-     var backgroundView: Int =0
+    var x:Int =x
+    var y:Int =y
+    var index:Int =index
+    var topElementos:Int=topElementos
+     var backgroundView: Int =backgroundView
 
 
-    fun getNewIndex():Int{
-        var indexAux=index+1
-        if(indexAux==topElementos){
-            indexAux=0
+
+    fun getNewIndex(indice:Int):Int{
+        var aux=indice+1
+        if(aux==topElementos){
+            aux=0
         }
-        return indexAux
+        return aux
     }
 }
