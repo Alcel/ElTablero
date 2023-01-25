@@ -110,14 +110,14 @@ class GameField : AppCompatActivity() {
                                                 changeView(topTileX-1,topTileY-2)
                                         }
                                         else if(i==0){
-                                                changeView(j,i-1)
-                                                changeView(j,i+1)
-                                                changeView(j+1,i)
-                                        }
-                                        else if(j==0){
                                                 changeView(j-1,i)
                                                 changeView(j+1,i)
                                                 changeView(j,i+1)
+                                        }
+                                        else if(j==0){
+                                                changeView(j,i-1)
+                                                changeView(j,i+1)
+                                                changeView(j+1,i)
                                         }
 
                                         else if(j==topTileX-1){
