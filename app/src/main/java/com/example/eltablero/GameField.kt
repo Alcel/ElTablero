@@ -94,16 +94,17 @@ class GameField : AppCompatActivity() {
                                         tv.text=dibujos[tramaToShow].toString()
                                 }
 
-                                ident++
+          ident++
                                 tv.id=ident
                                 ids[j][i]=ident
 
 
 
                                 tv.layoutParams= LinearLayout.LayoutParams(0,height,1.0f)
+                                mp=MediaPlayer.create(applicationContext,R.raw.lego)
                                 //Sin setOnClickListener
                                 tv.setOnClickListener {
-                                        mp=MediaPlayer.create(applicationContext,R.raw.lego)
+
 
                                         mp.start()
 
