@@ -8,6 +8,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.SystemClock
+import android.os.VibrationEffect
 import android.os.Vibrator
 import android.util.DisplayMetrics
 import android.view.ViewGroup
@@ -82,7 +83,7 @@ class GameField : AppCompatActivity() {
                         l2.orientation=LinearLayout.HORIZONTAL
                         for (j in 0..topTileX-1){
                                 val tramaToShow = miRandom()
-                                println(tramaToShow)
+
                                 values[j][i] = tramaToShow
                                 var tv:CeldaView = CeldaView(this,j,i,tramaToShow,topElement,
                                         dibujos[tramaToShow])
@@ -94,19 +95,26 @@ class GameField : AppCompatActivity() {
                                         tv.text=dibujos[tramaToShow].toString()
                                 }
 
-          ident++
+                                ident++
                                 tv.id=ident
                                 ids[j][i]=ident
 
 
 
                                 tv.layoutParams= LinearLayout.LayoutParams(0,height,1.0f)
-                                mp=MediaPlayer.create(applicationContext,R.raw.lego)
+                                if(sound){
+                                mp=MediaPlayer.create(applicationContext,R.raw.lego)}
+
                                 //Sin setOnClickListener
                                 tv.setOnClickListener {
+                                        if(vibration){
+                                                vibrator.vibrate(VibrationEffect.createOneShot(200, VibrationEffect.EFFECT_TICK))
+                                        }
 
+                                        if(sound){
+                                                mp.start()
+                                        }
 
-                                        mp.start()
 
                                         changeView(j,i)
 
