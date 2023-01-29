@@ -119,7 +119,7 @@ class GameField : AppCompatActivity() {
                                         changeView(j,i)
 
                                         if(j==0 && i==0){
-                                                changeView(0,0)
+                                                //changeView(0,0)
                                                 changeView(0,1)
                                                 changeView(1,0)
                                                 changeView(1,1)

@@ -19,4 +19,5 @@
         Para jugar tiene que pulsar las casillas las cuales van rotando en valor. En el caso de pulsar una casilla que no sea una esquina, esta pulsación también afectara a las casillas adyacentes y en el caso de estar la casilla pulsada en una esquina esta pulsación afectara también a las casillas que la rodean.</string>
     <string name="infoTexto">Esta aplicación ha sido desarrollada por Nicolás García Manrique miestras estudiaba en el I.E.S. Murgi.</string>
     <string name="contacto">Correo: nicogarcia.ng4@gmail.com</string>
+    <string name="opciones">Opciones</string>
 </resources>
